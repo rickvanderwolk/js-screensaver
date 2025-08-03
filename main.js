@@ -52,7 +52,6 @@ function applyDefaultStyles() {
         position: 'absolute',
         fontSize: '48px',
         color: getRandomishColor(),
-        textShadow: `0 0 10px ${getRandomishColor()}`
     });
 }
 
