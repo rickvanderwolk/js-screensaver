@@ -5,7 +5,6 @@
 ```
 npm install github:rickvanderwolk/js-screensaver
 
-
 import { startScreensaver } from 'js-screensaver'
 
 startScreensaver({
