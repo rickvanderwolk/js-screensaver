@@ -5,13 +5,13 @@ function getRandomishColor() {
 }
 
 function resetTimer() {
-    document.getElementById('screensaver').style.display = 'none';
+    document.getElementById('js-screensaver').style.display = 'none';
     clearTimeout(screensaverTimeout);
     screensaverTimeout = setTimeout(showScreensaver, 25 * 1000);
 }
 
 function showScreensaver() {
-    document.getElementById('screensaver').style.display = 'block';
+    document.getElementById('js-screensaver').style.display = 'block';
     animate();
     if (typeof changeLinkColors === 'function') {
         changeLinkColors();
@@ -19,7 +19,7 @@ function showScreensaver() {
 }
 
 function animate() {
-    const text = document.getElementById('screensaver-text');
+    const text =  document.getElementById('js-screensaver-text');
     let x = Math.random() * (window.innerWidth - text.clientWidth);
     let y = Math.random() * (window.innerHeight - text.clientHeight);
     let dx = 2;
@@ -48,7 +48,7 @@ function animate() {
 
         text.style.transform = `translate(${x}px, ${y}px)`;
 
-        if (document.getElementById('screensaver').style.display === 'block') {
+        if (document.getElementById('js-screensaver').style.display === 'block') {
             requestAnimationFrame(moveText);
         }
     }
