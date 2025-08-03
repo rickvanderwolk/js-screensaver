@@ -107,10 +107,13 @@ export function startScreensaver(options = {}) {
     resetTimer();
 }
 
-if (typeof document !== 'undefined' && typeof document.currentScript !== 'undefined') {
+if (
+    typeof document !== "undefined" &&
+    document.currentScript &&
+    document.currentScript.src.includes("js-screensaver")
+) {
     const script = document.currentScript;
-    const params = new URLSearchParams(script.src.split('?')[1] || '');
+    const params = new URLSearchParams(script.src.split("?")[1] || "");
     const options = Object.fromEntries(params.entries());
-
     startScreensaver(options);
 }
