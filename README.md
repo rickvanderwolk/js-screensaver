@@ -2,10 +2,16 @@
 
 ## How to use
 
-Add this to your HTML
+Using a CDN
 
 ```
 <script src="https://cdn.jsdelivr.net/gh/rickvanderwolk/js-screensaver/main.js"></script>
+```
+
+Or download script + include from local path
+
+```
+<script src="/assets/js/js-screensaver/main.js"></script>
 ```
 
 ## Change parameters
